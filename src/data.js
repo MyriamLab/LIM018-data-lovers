@@ -1,19 +1,55 @@
-import data from "./data/pokemon/pokemon.js";
+//import data from "./data/pokemon/pokemon.js";
+export const sortData = (data) => {
+  //Creando un nuevo array de data para ordenarlo sin modificar el original
+  let newArrPokemon = [...data];
+  console.log ('esto es el array original', data);
+  console.log ('esto es el nuevo array', newArrPokemon);
 
-// estas funciones son de ejemplo
+  //Ordenando los pokemon alfab de la A-Z
+  let arrOrderAtoZ = newArrPokemon.sort((a,b) => a.name < b.name ? -1 : 1) //-1 a se va a ordenar antes de b
 
+  //Ordenando los pokemon alfab de la Z-A
+  let arrOrderZtoA = [...newArrPokemon];
+  arrOrderZtoA.reverse()
+
+    console.log ('esto es el array ordenado A-Z', arrOrderAtoZ)
+    console.log ('esto es el array ordenado Z-A', arrOrderZtoA)
+    
+    //return??? 
+  }; 
+  
+
+
+/*
+ else {
+      newArrPokemon.sort(function(a,b){
+        if (b.name < a.name) {
+          return -1;
+        }
+        if (b.name > a.name) {
+          return 1;
+        }
+      });
+       }
+
+
+Ordenando los objetos del array A-Z
+  function sortAToZ (a,b){
+   return a.name.localeCompare(b.name);
+  }
+let arrOrder_Az = newArrPokemon.sort(sortAToZ);
+console.log ('esto es el array ordenado A-Z', arrOrder_Az);*/
+
+/* estas funciones son de ejemplo
 export const example = () => {
-  return "example";
+  return 'example';
 };
 
 export const anotherExample = () => {
-  return "OMG";
+  return 'OMG';
 };
 
-const pokemons = data.pokemon;
+const pokemonFire = pokemons.filter((x) => x.type == "fire");
+console.log("esto es tipo fuego", pokemonFire);
+*/
 
-let pokemonFire = pokemons.filter((x) => x.type == "fire");
-console.log(pokemonFire);
-
-let pokemonEnergy = pokemons.filter((x) => x.egg == "not in eggs");
-console.log(pokemonEnergy);

@@ -1,22 +1,28 @@
-import { example } from "./data.js";
-// import data from './data/lol/lol.js';
+import { sortData } from "./data.js";
 import data from "./data/pokemon/pokemon.js";
-// import data from './data/rickandmorty/rickandmorty.js';
-//console.log(example, data);
 
 //Nuevo código
-//let pokemonNames = document.getElementById("allPokemon"); // id del section
-let pokemonInfo = document.getElementById("pokemonInfo");
-//let numberType = document.getElementById("numberType");
-const pokemons = data.pokemon;
 
+//Llamando a la sección donde estará la info de los pokémon
+let pokemonInfo = document.getElementById("pokemonInfo");
+
+//Almacenando la data en una variable
+const pokemons = data.pokemon;
+console.log (sortData(pokemons,'name','des'))
+
+//Por cada objeto del array que muestre la info especificada
 pokemons.forEach(function (pokemon) {
-  //console.log(pokemon.name);
   pokemonInfo.innerHTML += `<div class="pokemonInfo" ><img src = '${pokemon.img}' alt='foto del pokémon'> <br> <p>${pokemon.name}</p> <p>${pokemon.num}</p> <p>${pokemon.type}</p></div>`;
-  //numberType.innerHTML += ``;
+ 
 });
 
-/*Fares
+/*
+let newArray = pokemons.filter(function(pokemon){
+return pokemon.type
+});
+console.log("esto es", newArray);
+
+Fares
 let pokemonNames = document.getElementById('root'); // id del div 
 const pokemons = data.pokemon;
 
