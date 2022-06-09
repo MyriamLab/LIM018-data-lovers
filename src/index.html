@@ -45,31 +45,59 @@
           <ul class="menu">
             <!--Ordenar alfabéticamente-->
             <li class="menuitem">
-              <select name="alphabeticalorder" id="">
+              <select name="alphabeticalOrder" id="alphabeticalOrder">
                 <option>Ordenar</option>
                 <option value="1">A-Z</option>
-                <option value="2">Z-A</option>
+                <option value="-1">Z-A</option>
               </select>
             </li>
             <!--Filtrar por tipo-->
             <li class="menuitem">
-              <select name="filterbytype" id="">
+              <select name= "pokeTypes" id="pokeTypes">
                 <option>Filtrar</option>
-                <option value="1">Agua</option>
-                <option value="2">Eléctrico</option>
-                <option value="3">Fuego</option>
-                <option value="4">Tierra</option>
+                <option value="steel">Acero</option>
+                <option value="water">Agua</option>
+                <option value="bug">Bicho</option>
+                <option value="dragon">Dragón</option>
+                <option value="electric">Eléctrico</option>
+                <option value="ghost">Fantasma</option>
+                <option value="fire">Fuego</option>
+                <option value="fairy">Hada</option>
+                <option value="ice">Hielo</option>
+                <option value="grass">Hierba</option>
+                <option value="fighting">Lucha</option>
+                <option value="normal">Normal</option>
+                <option value="psychic">Psíquico</option>
+                <option value="rock">Roca</option>
+                <option value="dark">Sinisestro</option>
+                <option value="ground">Tierra</option>
+                <option value="poison">Veneno</option>
+                <option value="flying">Volador</option>
               </select>
             </li>
 
             <!--Filtrar por porcentajes-->
             <li class="menuitem">
-              <select name="fylterbypercentage" id="">
+              <select name="pokePercentage" id="pokePercentage">
                 <option>%Tipos</option>
-                <option value="1">Agua</option>
-                <option value="2">Eléctrico</option>
-                <option value="3">Fuego</option>
-                <option value="4">Tierra</option>
+                <option value="steel">Acero</option>
+                <option value="water">Agua</option>
+                <option value="bug">Bicho</option>
+                <option value="dragon">Dragón</option>
+                <option value="electric">Eléctrico</option>
+                <option value="ghost">Fantasma</option>
+                <option value="fire">Fuego</option>
+                <option value="fairy">Hada</option>
+                <option value="ice">Hielo</option>
+                <option value="grass">Hierba</option>
+                <option value="fighting">Lucha</option>
+                <option value="normal">Normal</option>
+                <option value="psychic">Psíquico</option>
+                <option value="rock">Roca</option>
+                <option value="dark">Sinisestro</option>
+                <option value="ground">Tierra</option>
+                <option value="poison">Veneno</option>
+                <option value="flying">Volador</option>
               </select>
             </li>
           </ul>
@@ -86,69 +114,11 @@
         <!--En esta sección esta toda la info de los pokemon, se introduce desde main.js-->
         <section class="allPokemon" id="allPokemon">
           <div id="pokemonInfo"></div>
+
+          <section id="prueba"></section>
         </section>
         <script src="main.js" type="module"></script>
       </div>
     </main>
   </body>
 </html>
-
-<!-- <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <section class="allPokemon" id="allPokemon">
-  <figure>
-      <img src="./galeria/pokebola.jpg" alt="pokebola" width="1800px">
-   </figure>
-  </section>
-    
-    <div id="pokemonInfo">
-      <select name="" id="">
-        <option disabled selected>Ordenar</option>
-        <option value="1">A-Z</option>
-        <option value="2">Z-A</option>
-      </select>
-   
-
-    <div class="">
-      <select name="" id="">
-        <option disabled selected>Filtrar</option>
-        <option value="1">Agua</option>
-        <option value="2">Eléctrico</option>
-        <option value="3">Fuego</option>
-        <option value="4">Tierra</option>
-      </select>
-    </div>
-
-    <select name="" id="">
-      <option disabled selected>% Tipos</option>
-      <option value="1">Agua</option>
-      <option value="2">Eléctrico</option>
-      <option value="3">Fuego</option>
-      <option value="4">Tierra</option>
-    </select>
-    </div>
-
-   
-   
-
-    
-<div id="numberType">
-    </div>
-    
-
-
-
-  
-   
-
-    
-    <script src="main.js" type="module"></script>
-  </body>
-</html>
--->

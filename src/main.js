@@ -1,60 +1,41 @@
 import { sortData } from "./data.js";
+import { filterData } from "./data.js";
 import data from "./data/pokemon/pokemon.js";
-
-//Nuevo código
 
 //Llamando a la sección donde estará la info de los pokémon
 let pokemonInfo = document.getElementById("pokemonInfo");
 
 //Almacenando la data en una variable
 const pokemons = data.pokemon;
-console.log (sortData(pokemons,'name','des'))
 
 //Por cada objeto del array que muestre la info especificada
-pokemons.forEach(function (pokemon) {
-  pokemonInfo.innerHTML += `<div class="pokemonInfo" ><img src = '${pokemon.img}' alt='foto del pokémon'> <br> <p>${pokemon.name}</p> <p>${pokemon.num}</p> <p>${pokemon.type}</p></div>`;
- 
+function showInfo(dataPokemon) {
+  pokemonInfo.innerHTML = "";
+  dataPokemon.forEach(function (pokemon) {
+    pokemonInfo.innerHTML += `<div class="pokemonInfo" ><img src = '${pokemon.img}' alt='foto del pokémon'> <br> <p>${pokemon.name}</p> <p>${pokemon.num}</p> <p>${pokemon.type}</p></div>`;
+  
+  });
+}
+// Se muestran los pokémon en el navegador
+showInfo(pokemons);
+
+//Traemos al select donde están A-Z Z-A
+let alphabeticalOrder = document.getElementById ('alphabeticalOrder');
+
+//Al escoger una opción (change) se muestra en consola ordenados alfabéticamente
+alphabeticalOrder.addEventListener('change', function (ev) {
+let alphabeticOrder = ev.target.value
+const sortedData = sortData(pokemons, alphabeticOrder);
+showInfo (sortedData);
 });
 
-/*
-let newArray = pokemons.filter(function(pokemon){
-return pokemon.type
+//Traemos al select donde están las opciones de tipo de pokémon
+let pokeTypes = document.getElementById ('pokeTypes');
+
+//Al escoger una opción (change) se muestra en consola los tipos de pokémon escogidos
+pokeTypes.addEventListener('change', function (e) {
+  let typePokemon = e.target.value 
+  const filteredData = filterData(pokemons, typePokemon);
+  showInfo(filteredData);
 });
-console.log("esto es", newArray);
 
-Fares
-let pokemonNames = document.getElementById('root'); // id del div 
-const pokemons = data.pokemon;
-
-pokemons.forEach(function(pokemon){
-    //console.log(pokemon.name);
-    pokemonNames.innerHTML += `<div>${pokemon.name} <img src =  '${pokemon.img}'> <p>${pokemon.type}</p> </div>`
-});
-*/
-
-/* NAME 
-//1. Creo el nodo img - p
-const namePokemon = document.createElement("p");
-
-// 2. Seleccio al div padre photo
-let pokemonPhoto = document.querySelector(".photo");
-
-// 3. Agrego el nodo p al div padre .photo
-pokemonPhoto.appendChild(namePokemon);
-
-// 4. creo el texto del nombre 
-const textNamePokemon = document.createTextNode(pokemon.name);
-
-// 5. Injecta la imagen  dentro del div 
-namePokemon.appendChild(textNamePokemon);
-
-// IMAGE
-//1. Creo el nodo img 
-const imgPokemon = document.createElement("img");
-
-// 3. Agrego el nodo img al div padre .photo
-pokemonPhoto.appendChild(imgPokemon); 
-
-// 5. Inyecto la imagen de la base de datos 
-imgPokemon.appendChild(pokemon.img)
-*/
