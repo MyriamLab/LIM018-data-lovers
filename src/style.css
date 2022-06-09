@@ -1,4 +1,5 @@
-* {  margin: 0;
+* {  
+    margin: 0;
     padding: 0;   
 }
 
@@ -118,9 +119,14 @@ h2 {
     text-align: center;
     }
 
-    .pokemonInfo p {
+.pokemonInfo p {
     font-weight: bold;
     }
 
 
     
+    #prueba {
+        background-color: blue;
+       
+
+    }
