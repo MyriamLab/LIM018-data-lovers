@@ -39,3 +39,40 @@ pokeTypes.addEventListener('change', function (e) {
   showInfo(filteredData);
 });
 
+// appendChild
+//1. Seleccio al section padre
+let sectionPrueba = document.getElementById("prueba");
+// IMAGE
+// 2. Creo el nodo img
+const imgPokemon = document.createElement("img");
+imgPokemon.src = "https://www.serebii.net/pokemongo/pokemon/001.png";
+// 3. Agrego el nodo img al section padre id prueba
+sectionPrueba.appendChild(imgPokemon);
+
+//NAME
+//1. Creo el nodo div
+const namePokemon = document.createElement("div");
+
+// 2. Agrego el nodo div al padre section prueba
+sectionPrueba.appendChild(namePokemon);
+namePokemon.style.backgroundColor = "purple";
+
+// 3. creo el texto del nombre
+const textNamePokemon1 = document.createTextNode("Aquí nombre");
+
+// 4.
+namePokemon.appendChild(textNamePokemon1);
+
+//NUMBER 
+//1. Creo el nodo div
+const numberPokemon = document.createElement("div");
+
+// 2. Agrego el nodo div al padre section prueba
+sectionPrueba.appendChild(numberPokemon);
+numberPokemon.style.backgroundColor = "red";
+
+// 3. creo el texto del nombre
+const textNamePokemon2 = document.createTextNode(pokemons.name);
+
+// 4.
+numberPokemon.appendChild(textNamePokemon2);
