@@ -27,7 +27,9 @@
         />
         <div class="title">
           <h1 id="texts">¡Bienvenido Maestro y Entrenador Pokémon!</h1>
-          <h2 id="texts"> Encuentra todos los Pokémon de la región de Kanto y Johto</h2>
+          <h2 id="texts">
+            Encuentra todos los Pokémon de la región de Kanto y Johto
+          </h2>
         </div>
 
         <img
@@ -45,31 +47,59 @@
           <ul class="menu">
             <!--Ordenar alfabéticamente-->
             <li class="menuitem">
-              <select name="alphabeticalorder" id="">
+              <select name="alphabeticalOrder" id="alphabeticalOrder">
                 <option>Ordenar</option>
                 <option value="1">A-Z</option>
-                <option value="2">Z-A</option>
+                <option value="-1">Z-A</option>
               </select>
             </li>
             <!--Filtrar por tipo-->
             <li class="menuitem">
-              <select name="filterbytype" id="">
+              <select name= "pokeTypes" id="pokeTypes">
                 <option>Filtrar</option>
-                <option value="1">Agua</option>
-                <option value="2">Eléctrico</option>
-                <option value="3">Fuego</option>
-                <option value="4">Tierra</option>
+                <option value="steel">Acero</option>
+                <option value="water">Agua</option>
+                <option value="bug">Bicho</option>
+                <option value="dragon">Dragón</option>
+                <option value="electric">Eléctrico</option>
+                <option value="ghost">Fantasma</option>
+                <option value="fire">Fuego</option>
+                <option value="fairy">Hada</option>
+                <option value="ice">Hielo</option>
+                <option value="grass">Hierba</option>
+                <option value="fighting">Lucha</option>
+                <option value="normal">Normal</option>
+                <option value="psychic">Psíquico</option>
+                <option value="rock">Roca</option>
+                <option value="dark">Sinisestro</option>
+                <option value="ground">Tierra</option>
+                <option value="poison">Veneno</option>
+                <option value="flying">Volador</option>
               </select>
             </li>
 
             <!--Filtrar por porcentajes-->
             <li class="menuitem">
-              <select name="fylterbypercentage" id="">
+              <select name="pokePercentage" id="pokePercentage">
                 <option>%Tipos</option>
-                <option value="1">Agua</option>
-                <option value="2">Eléctrico</option>
-                <option value="3">Fuego</option>
-                <option value="4">Tierra</option>
+                <option value="steel">Acero</option>
+                <option value="water">Agua</option>
+                <option value="bug">Bicho</option>
+                <option value="dragon">Dragón</option>
+                <option value="electric">Eléctrico</option>
+                <option value="ghost">Fantasma</option>
+                <option value="fire">Fuego</option>
+                <option value="fairy">Hada</option>
+                <option value="ice">Hielo</option>
+                <option value="grass">Hierba</option>
+                <option value="fighting">Lucha</option>
+                <option value="normal">Normal</option>
+                <option value="psychic">Psíquico</option>
+                <option value="rock">Roca</option>
+                <option value="dark">Sinisestro</option>
+                <option value="ground">Tierra</option>
+                <option value="poison">Veneno</option>
+                <option value="flying">Volador</option>
               </select>
             </li>
           </ul>
@@ -86,7 +116,10 @@
         <!--En esta sección esta toda la info de los pokemon, se introduce desde main.js-->
         <section class="allPokemon" id="allPokemon">
           <div id="pokemonInfo"></div>
+
+          <section id="prueba"></section>
         </section>
+
         <script src="main.js" type="module"></script>
       </div>
     </main>

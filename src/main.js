@@ -1,4 +1,5 @@
 import { sortData } from "./data.js";
+import { filterData } from "./data.js";
 import data from "./data/pokemon/pokemon.js";
 
 //Nuevo código
@@ -8,53 +9,102 @@ let pokemonInfo = document.getElementById("pokemonInfo");
 
 //Almacenando la data en una variable
 const pokemons = data.pokemon;
-console.log (sortData(pokemons,'name','des'))
+const sortedData = sortData(pokemons, 1);
+ // fire entre "" porque es el string
 
 //Por cada objeto del array que muestre la info especificada
-pokemons.forEach(function (pokemon) {
-  pokemonInfo.innerHTML += `<div class="pokemonInfo" ><img src = '${pokemon.img}' alt='foto del pokémon'> <br> <p>${pokemon.name}</p> <p>${pokemon.num}</p> <p>${pokemon.type}</p></div>`;
- 
+
+function showInfo(dataPokemon) {
+  pokemonInfo.innerHTML = "";
+  dataPokemon.forEach(function (pokemon) {
+    pokemonInfo.innerHTML += `<div class="pokemonInfo" ><img src = '${pokemon.img}' alt='foto del pokémon'> <br> <p>${pokemon.name}</p> <p>${pokemon.num}</p> <p>${pokemon.type}</p></div>`;
+  });
+
+}
+showInfo(pokemons);
+
+//Traemos al select donde están A-Z Z-A
+let alphabeticalOrder = document.getElementById ('alphabeticalOrder');
+
+//Al escoger una opción (change) se muestra en consola ordenados alfabéticamente
+alphabeticalOrder.addEventListener('change', function (ev) {
+let alphabeticOrder = ev.target.value
+const sortedData = sortData(pokemons, alphabeticOrder);
+showInfo (sortedData);
 });
 
-/*
-let newArray = pokemons.filter(function(pokemon){
-return pokemon.type
+//Traemos al select donde están las opciones de tipo de pokémon
+let pokeTypes = document.getElementById ('pokeTypes');
+
+//Al escoger una opción (change) se muestra en consola los tipos de pokémon escogidos
+pokeTypes.addEventListener('change', function (e) {
+  let typePokemon = e.target.value 
+  const filteredData = filterData(pokemons, typePokemon);
+  showInfo(filteredData);
 });
-console.log("esto es", newArray);
 
-Fares
-let pokemonNames = document.getElementById('root'); // id del div 
-const pokemons = data.pokemon;
+//*Evento change*/
+//let sectionPrueba = document.getElementById("prueba"); // atrapo el id del section id prueba
+let tipos = document.getElementById("tipos");
 
-pokemons.forEach(function(pokemon){
-    //console.log(pokemon.name);
-    pokemonNames.innerHTML += `<div>${pokemon.name} <img src =  '${pokemon.img}'> <p>${pokemon.type}</p> </div>`
+tipos.addEventListener("change", function (e) {
+  // (e) para recibir al evento
+  let valor = e.target.value; // valor almacena  el string "water"
+  const filteredData = filterData(pokemons, valor); //es una función y devuleve un arreglo
+  showInfo(filteredData);
+  /*let soloType = [];
+  for (let i = 0; i < valor.length; i++) {
+    let valorActual = valor[i];
+    soloType.push(valorActual);
+    console.log(soloType);
+  }
+
+  soloType.forEach(function (item) {
+    // valor no es iterable?
+    const tipo = document.createElement("p");
+    tipo.textContent = item;
+    sectionPrueba.appendChild(tipo);
+  });
+  */
 });
-*/
 
-/* NAME 
-//1. Creo el nodo img - p
-const namePokemon = document.createElement("p");
 
-// 2. Seleccio al div padre photo
-let pokemonPhoto = document.querySelector(".photo");
-
-// 3. Agrego el nodo p al div padre .photo
-pokemonPhoto.appendChild(namePokemon);
-
-// 4. creo el texto del nombre 
-const textNamePokemon = document.createTextNode(pokemon.name);
-
-// 5. Injecta la imagen  dentro del div 
-namePokemon.appendChild(textNamePokemon);
-
+// appendChild
+//1. Seleccio al section padre
+let sectionPrueba = document.getElementById("prueba");
 // IMAGE
-//1. Creo el nodo img 
+// 2. Creo el nodo img
 const imgPokemon = document.createElement("img");
+imgPokemon.src = "https://www.serebii.net/pokemongo/pokemon/001.png";
+// 3. Agrego el nodo img al section padre id prueba
+sectionPrueba.appendChild(imgPokemon);
 
-// 3. Agrego el nodo img al div padre .photo
-pokemonPhoto.appendChild(imgPokemon); 
+//NAME
+//1. Creo el nodo div
+const namePokemon = document.createElement("div");
 
-// 5. Inyecto la imagen de la base de datos 
-imgPokemon.appendChild(pokemon.img)
-*/
+// 2. Agrego el nodo div al padre section prueba
+sectionPrueba.appendChild(namePokemon);
+namePokemon.style.backgroundColor = "purple";
+
+// 3. creo el texto del nombre
+const textNamePokemon1 = document.createTextNode("Aquí nombre");
+
+// 4.
+namePokemon.appendChild(textNamePokemon1);
+
+//NUMBER 
+//1. Creo el nodo div
+const numberPokemon = document.createElement("div");
+
+// 2. Agrego el nodo div al padre section prueba
+sectionPrueba.appendChild(numberPokemon);
+numberPokemon.style.backgroundColor = "red";
+
+// 3. creo el texto del nombre
+const textNamePokemon2 = document.createTextNode(pokemons.name);
+
+// 4.
+numberPokemon.appendChild(textNamePokemon2);
+
+
