@@ -6,7 +6,7 @@ export const sortData = (data, order) => {
   //Ordenando los pokemon alfabéticamente
   let arrOrder = newArrPokemon.sort((a,b) => a.name < b.name ? -order : order) //-order a se va a posicionar antes (asc)    
     return arrOrder 
-  }; 
+  };
 
   //Función para filtrar por tipo de pokémon
   export const filterData = (data, type) => {
@@ -24,6 +24,7 @@ export const sortData = (data, order) => {
         pokePercen.push(data[i].type)
       }
     }
+    console.log (pokePercen)
     return ((pokePercen.length) * 100 / 251).toFixed(2) + '%'
     };
   

@@ -53,6 +53,75 @@ let pokePercentage = document.getElementById ('pokePercentage');
 pokePercentage.addEventListener('change', function (e) {
 let pokemonPercen = e.target.value
 const percenData = computeStats (pokemons, pokemonPercen) // Este valor es de tipo string
+console.log ('este es el porcentaje de pokémon tipo ' + pokemonPercen, percenData)
+
+});
+
+//Traemos a la barra de búsqueda
+let searchBar = document.querySelector('#searchBar');
+
+//Que la barra busque los pokémon al escribir
+searchBar.addEventListener('input', () => {
+  const searchedData = searchData (pokemons)
+  showInfo(searchedData);
+  if (searchBar.value == '') {
+   showInfo(searchedData);
+  }
+});
+
+
+/*//Función de la barra de búsqueda
+searchBar.addEventListener('keyup', (e) =>  {
+ 
+});*/
+ 
+
+/*
+//Gráfica de prueba
+let pokeGraphic = document.getElementById('pokeGraphic').getContext("2d");
+let chart = new Chart(pokeGraphic, {
+  type: "bar",
+  data: {
+      labels: ['Fuego', 'Agua', 'Bicho', 'Hierba'],
+      dataset: [
+          {
+            label: 'Gráfica de Pokémon',
+            backgroundColor: 'rgb(252,50,6)',
+            data: [26,15,9,11]
+          }
+      ]
+  }
+})*/
+
+
+
+
+
+
+
+
+/* appendChild
+//1. Seleccio al section padre
+let sectionPrueba = document.getElementById("prueba");
+// IMAGE
+// 2. Creo el nodo img
+const imgPokemon = document.createElement("img");
+imgPokemon.src = "https://www.serebii.net/pokemongo/pokemon/001.png";
+// 3. Agrego el nodo img al section padre id prueba
+sectionPrueba.appendChild(imgPokemon);
+
+//NAME
+//1. Creo el nodo div
+const namePokemon = document.createElement("div");
+
+// 2. Agrego el nodo div al padre section prueba
+sectionPrueba.appendChild(namePokemon);
+namePokemon.style.backgroundColor = "purple";
+
+//Al escoger una opción (change) se muestran el porcentaje de pokémon escogidos
+pokePercentage.addEventListener('change', function (e) {
+let pokemonPercen = e.target.value
+const percenData = computeStats (pokemons, pokemonPercen) // Este valor es de tipo string
 //console.log ('este es el porcentaje de pokémon tipo ' + pokemonPercen, percenData)
 
 });
@@ -68,3 +137,5 @@ searchBar.addEventListener('input', () => {
    showInfo(searchedData);
   }
 });
+// 4.
+numberPokemon.appendChild(textNamePokemon2);*/
