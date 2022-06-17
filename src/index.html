@@ -2,46 +2,49 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PokeSearch</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/png" href="imagen/Pokebola.png" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Andika&display=swap"
-      rel="stylesheet"
-    />
+    <link href="http://fonts.cdnfonts.com/css/retro-land-mayhem" rel="stylesheet">  
+    <link href="http://fonts.cdnfonts.com/css/angeltoes" rel="stylesheet">                              
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
   </head>
 
-  <body>
+  <body class>
     <!--Barra de navegación-->
     <header class="header">
       <div class="welcome">
-        <img
-          src="imagen/logopokemon.png"
-          id="logopokemon"
-          width="160em"
-          height="120em"
-        />
+        <figure>
+          <img
+            src="imagen/logopokemon.png"
+            id="logopokemon"
+            width="160px"
+            height="120px"
+            alt = "logo de pokémong go"
+          />
+        </figure>
         <div class="title">
           <h1 id="texts">¡Bienvenido Maestro y Entrenador Pokémon!</h1>
           <h2 id="texts">
             Encuentra todos los Pokémon de la región de Kanto y Johto
           </h2>
         </div>
+          <figure>
+            <img
+              src="imagen/pikachuface1.png"
+              id="pikachuface"
+              width="160px"
+              height="120px"
+              alt = "rostro de pikachu"
+            />
+          </figure>
+        </div>
 
-        <img
-          src="imagen/pikachuface1.png"
-          id="pikachuface"
-          width="160em"
-          height="120em"
-        />
-      </div>
       <div class="search">
-        <input type="search" id="searchbar" placeholder="  Buscar Pokémon" />
+        <input type="search" id="searchBar" placeholder="  Buscar Pokémon" />
       </div>
+
       <div class="navegationbar">
         <nav class="nav">
           <ul class="menu">
@@ -81,7 +84,7 @@
             <!--Filtrar por porcentajes-->
             <li class="menuitem">
               <select name="pokePercentage" id="pokePercentage">
-                <option>%Tipos</option>
+                <option>% Tipos</option>
                 <option value="steel">Acero</option>
                 <option value="water">Agua</option>
                 <option value="bug">Bicho</option>
@@ -107,21 +110,21 @@
       </div>
     </header>
 
-    <main>
+    <main class = "main">
       <div class="banner">
-        <figure>
-          <img src="./imagen/pokeballs.jpg" alt="fondo pokebolas" />
-        </figure>
-
         <!--En esta sección esta toda la info de los pokemon, se introduce desde main.js-->
         <section class="allPokemon" id="allPokemon">
-          <div id="pokemonInfo"></div>
-
-          <section id="prueba"></section>
+         <div id="pokemonInfo"></div>
         </section>
-
         <script src="main.js" type="module"></script>
       </div>
+
+      <!--PANTALLA 2-->
+      <section class = "content" id="content">
+        <canvas id="myChart" height="60px" width="60px"></canvas>
+      </section>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
+      <script src="./chart.js"></script>
     </main>
   </body>
 </html>
