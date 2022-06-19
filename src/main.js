@@ -117,22 +117,24 @@ const namePokemon = document.createElement("div");
 sectionPrueba.appendChild(namePokemon);
 namePokemon.style.backgroundColor = "purple";
 
-// 3. creo el texto del nombre
-const textNamePokemon1 = document.createTextNode("Aquí nombre");
+//Al escoger una opción (change) se muestran el porcentaje de pokémon escogidos
+pokePercentage.addEventListener('change', function (e) {
+let pokemonPercen = e.target.value
+const percenData = computeStats (pokemons, pokemonPercen) // Este valor es de tipo string
+//console.log ('este es el porcentaje de pokémon tipo ' + pokemonPercen, percenData)
 
-// 4.
-namePokemon.appendChild(textNamePokemon1);
+});
 
-//NUMBER 
-//1. Creo el nodo div
-const numberPokemon = document.createElement("div");
+//Traemos a la barra de búsqueda
+let searchBar = document.querySelector('#searchBar');
 
-// 2. Agrego el nodo div al padre section prueba
-sectionPrueba.appendChild(numberPokemon);
-numberPokemon.style.backgroundColor = "red";
-
-// 3. creo el texto del nombre
-const textNamePokemon2 = document.createTextNode(pokemons.name);
-
+//Que la barra busque los pokémon al escribir
+searchBar.addEventListener('input', () => {
+  const searchedData = searchData (pokemons)
+  showInfo(searchedData);
+  if (searchBar.value == '') {
+   showInfo(searchedData);
+  }
+});
 // 4.
 numberPokemon.appendChild(textNamePokemon2);*/
