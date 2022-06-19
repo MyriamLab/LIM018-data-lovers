@@ -87,6 +87,7 @@ h2 {
     font-family: 'AngelToes', sans-serif;
     font-size: 0.8em;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .menuitem{
@@ -235,7 +236,6 @@ h2 {
             margin-left: 0.5em;*/
             padding: 0.5em;
        }
-       
-}
+    } 
 
 

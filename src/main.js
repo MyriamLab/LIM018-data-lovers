@@ -61,19 +61,18 @@ console.log ('este es el porcentaje de pokémon tipo ' + pokemonPercen, percenDa
 let searchBar = document.querySelector('#searchBar');
 
 //Que la barra busque los pokémon al escribir
-searchBar.addEventListener('input', () => {
-  const searchedData = searchData (pokemons)
-  showInfo(searchedData);
-  if (searchBar.value == '') {
-   showInfo(searchedData);
+searchBar.addEventListener('input', function (e) {
+  let searchingBar = e.target.value
+  const searchedData = searchData (pokemons,searchingBar)
+  if (searchedData.length === 0) {
+    alert("Lo siento entrenador, no existen Pokémon");
+  } else {
+    showInfo(searchedData);
   }
 });
 
 
-/*//Función de la barra de búsqueda
-searchBar.addEventListener('keyup', (e) =>  {
- 
-});*/
+
  
 
 /*

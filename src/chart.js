@@ -1,5 +1,9 @@
 //https://www.youtube.com/watch?v=eyTKJmN-I2o&ab_channel=carloscdev
 //npm install chart.js  (https://www.npmjs.com/package/chart.js) npm ci
+export const renderChart = (labels, data, canvas) => {
+
+};
+
 
 const context = document.getElementById('myChart')
 const types = ['Fuego', 'Agua',]
