@@ -1,5 +1,10 @@
 # Data Lovers
 
+## Autores de este clon
+
+Daniela Andrade y Myriam Lab.
+Contribución a la documentación por @icarito.
+
 ## Índice
 
 * [1. Preámbulo](#1-preámbulo)
