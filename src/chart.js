@@ -1,11 +1,17 @@
 //https://www.youtube.com/watch?v=eyTKJmN-I2o&ab_channel=carloscdev
 //npm install chart.js  (https://www.npmjs.com/package/chart.js) npm ci
+/*import { computeStats } from "./data.js";
 export const renderChart = (labels, data, canvas) => {
+let data = {
+    labels: [document.getElementById('pokePercentage').value],
+    datasets: [{
+        data: computeStats()
+    }]
+}
+};*/
 
-};
 
-
-const context = document.getElementById('myChart')
+/*const context = document.getElementById('myChart').getContext('2d');
 const types = ['Fuego', 'Agua',]
 const percen = [20,10]
 
@@ -32,4 +38,4 @@ const myChart = new Chart(context, {
         }]
     }
 
-})
+})*/
