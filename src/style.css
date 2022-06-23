@@ -1,20 +1,21 @@
-* { 
-    box-sizing: border-box;  
+* {
+    box-sizing: border-box;
     margin: 0;
-    padding: 0; 
+    padding: 0;
 }
 
 body {
-  background-image: url(imagen/pokeballs.jpg);  
-  position: relative;
+    background-image: url(imagen/pokeballs.jpg);
+    position: relative;
 }
 
 h1 {
-    font-family:'Retro Land Mayhem', sans-serif;
+    font-family: 'Retro Land Mayhem', sans-serif;
     font-size: 2em;
     text-align: center;
     color: #ffffff;
-    margin: 1em 0 0.5em 0.7em; /*arriba, derecha, abajo, izquierda*/
+    margin: 1em 0 0.5em 0.7em;
+    /*arriba, derecha, abajo, izquierda*/
     /*margin-top: 1em;
     margin-bottom: 0.5em;
     margin-left: 0.7em;*/
@@ -25,21 +26,22 @@ h2 {
     font-size: 1em;
     text-align: center;
     color: #ffffff;
-   }
+}
 
 /*HEADER*/
 .header {
     background-color: #F51939;
-    height: 15.5em ;
-   }
-   
+    height: 15.5em;
+}
+
 .welcome {
-    display:flex;
+    display: flex;
     justify-content: space-around;
-   }
+}
 
 .welcome img {
-    margin: 1.5em 0 0 0.5em; /*arriba, derecha, abajo, izquierda*/
+    margin: 1.5em 0 0 0.5em;
+    /*arriba, derecha, abajo, izquierda*/
     /*margin-top: 1.5em;
     margin-left: 0.5em;*/
 }
@@ -48,10 +50,10 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1.2em ;
-   }
+    margin-bottom: 1.2em;
+}
 
-#searchBar{
+#searchBar {
     background-image: url("imagen/Pokebola.png");
     background-size: 1.8em 1.8em;
     background-repeat: no-repeat;
@@ -63,7 +65,7 @@ h2 {
     font-weight: bold;
     font-size: 0.8em;
     border-radius: 3em;
-   }
+}
 
 .nav {
     display: flex;
@@ -75,12 +77,11 @@ h2 {
     display: flex;
     text-align: center;
     list-style: none;
-   } 
-   
-.navegationbar select {   
-    margin-top: 1em;
-    width: 10em;
-    height: 1.8em;
+}
+
+.navegationbar select {
+    width: 13em;
+    height: 2.3em;
     border-radius: 3em;
     text-align: center;
     font-family: 'AngelToes', sans-serif;
@@ -91,62 +92,86 @@ h2 {
 
 .menuitem {
     display: flex;
-    margin: 0 1.80em; 
+    margin: 0 1.80em;
     text-decoration: none;
-   } 
+}
+
+#cleanButton {
+    margin: 0 0 0 2em;
+    /*arriba, derecha, abajo, izquierda*/
+    width: 13em;
+    height: 2.1em;
+    border-radius: 1em;
+    border: outset;
+    font-family: 'AngelToes', sans-serif;
+    font-weight: bold;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+#cleanButton:hover {
+    transform: scale(1.1);
+}
 
 /*MAIN*/
 .banner img {
     width: 100%;
     height: auto;
-  }
+}
 
 .banner {
-     position: relative;
-     width: 100%;
-     height: auto;
-     object-fit: cover;
+    position: relative;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
-      
-.allPokemon { /*Clase padre*/
+
+
+.allPokemon {
+    /*Clase padre*/
     top: 20px;
     bottom: 100px;
     border-radius: 20px;
     left: 20px;
     right: 20px;
 }
-    
-/* muestra los pokemon en columnas */
-#pokemonInfo { /* Clase Hijo*/
+
+/* muetsra los pokemon en columnas */
+#pokemonInfo {
+    /* Clase Hijo*/
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 1em;
     background-color: #ffffff;
     border-radius: 1em;
-    margin: 2.5em 2.5em;/*arriba, derecha, abajo, izquierda*/
+    margin: 2.5em 2.5em;
+    /*arriba, derecha, abajo, izquierda*/
     padding-left: 1em;
 }
 
-.pokeInfo { /* Clase creada con JS, clase nieto*/
-    border-radius: 3px;
+.pokeInfo {
+    /* Clase creada con JS, clase nieto*/
+    border-radius: 0.2em;
     padding: 15px;
     border-width: 4px;
-    margin: 3em 2.5em 3em 1.5em; /*arriba, derecha, abajo, izquierda*/
+    margin: 3em 2.5em 3em 1.5em;
+    /*arriba, derecha, abajo, izquierda*/
     /*margin-top: 3em;
     margin-bottom: 3em;
     margin-left: 1.5em;
     margin-right: 2.5em;*/
     text-align: center;
-    box-shadow: 6px 6px 6px #ECE2E2;
+    box-shadow: 6px 6px 6px #828182;
     /*#EEC4C4 #E0C097 #ECE2E2 #E8EAE6 #aca1a1ab*/
-    background-color: #d1d1d1bb;
+    background: rgb(143,143,143);
+    background: linear-gradient(140deg, rgba(143,143,143,1) 0%, rgba(165,171,177,1) 47%, rgba(75,80,89,1) 100%);/*#bbc0c5 #385ca8*/
 }
-
+/*#0a244d #21559e*/
 .pokeInfo p {
     margin-top: 0.5em;
     font-family: 'AngelToes', sans-serif;
     font-size: 0.9em;
-    color: black;
+    color: #ffffff;
     font-weight: bold;
 }
 
@@ -154,50 +179,188 @@ h2 {
     margin-top: 0.5em;
     font-family: 'AngelToes', sans-serif;
     font-size: 1.2em;
-    color: black;
-    font-weight: bold; 
+    color: #ffffff;
+    font-weight: bold;
 }
 
 .pokeInfo img {
-    background-color: #EFEFEF;
+    background-color: #ccccccf6;
+    border-radius: 0.2em;
 }
 
-/*MEDIA QUERIES*/
-
-@media (max-width: 1300px) {
-    .header {
-      background-color: #F51939;
-    }
-  
-    h1 {
-      font-size: 1.5em ;
-    }
-      
-    h2  {
-      font-size:1em ;
-    }
-  
-#pokemonInfo {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1em;
-    }
+/*PANTALLA 2*/
+.secondScreen {
+    display: none;
 }
-  
-@media (max-width: 850px) {  
+
+#secondScreen {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    height: 50em;
+    border-radius: 1em;
+    margin: 2.5em 2.5em;
+    padding-left: 1em;
+}
+
+/*div1 padre de divPercen y de imgPokedex*/
+.divPokedex {
+    padding: 0.4em;
+    margin: 4.5em 2.5em;
+}
+
+.divPercen {
+    justify-content: center;
+    align-items: center;
+    font-family: 'AngelToes', sans-serif;
+    font-size: 1.8em;
+    padding: 20px;
+    position: absolute;
+    background-color: yellow;
+    margin: 8em 0 0 4em;
+    width: 10%;
+    /*margin: 2.5em 2.5em;arriba, derecha, abajo, izquierda*/
+}
+
+.texto {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.imgPokedex {
+    justify-content: flex-end;
+    border-radius: 1.5em;
+    width: 30em;
+    height: 37em;
+}
+
+/*div 2*/
+.divImg {
+    display: flex;
+    flex-direction: wrap;
+    background-color: white;
+    width: 50%;
+    border-radius: 0 2em 2em 0;
+}
+
+.divImg img {
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    display: block;
+    margin-top: 12em;
+    height: 20em;
+    width: 45em;
+}
+
+/*FOOTER*/
+footer {
+    display: flex;
+    background-color: #F51939;
+    padding: 0.09em;
+    font-family: 'AngelToes', sans-serif;
+    color: white;
+    text-align: center;
+    height: 8.5em;
+}
+
+footer .developers,
+.rights {
+    padding: 0.5em 1.5em;
+}
+
+.developers {
+    justify-items: center;
+    text-align: center;
+    width: 50%;
+    margin: 0.4em 0 0.4em 0;
+    border-right: solid 0.01em #ffffff;
+}
+
+.developers img {
+    width: 1.8em;
+    height: 1.8em;
+    margin-left: 1em;
+}
+
+.developers div {
+    display: flex;
+    margin: 0.3em;
+    justify-content: center;
+}
+
+.dev1,
+.dev2 {
+    align-items: center;
+    justify-content: center;
+}
+
+.rights {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5em;
+}
+
+.rights img {
+    width: 12em;
+    height: 2em;
+}
+
+
+@media (max-width: 728px) {
     h1 {
-        margin: 0.8em 0 0 0.5em; /*margin-top: 0.8em; margin-left: 0.5em;*/
-        font-size: 1.5em;
+        margin: 0.8em 0 0 0.5em;
+        /*margin-top: 0.8em;
+            margin-left: 0.5em;*/
+        font-size: 1em;
         text-align: center;
-       }
+    }
 
     h2 {
-        margin: 0.8em 0 2em 0; /*margin-top: 0.8em;   margin-bottom: 2em;*/
-        font-size: 0.8em;
+        margin: 0.8em 0 2em 0;
+        /*margin-top: 0.8em;
+            margin-bottom: 2em;*/
+        font-size: 0.6em;
         text-align: center;
-       }
+    }
 
-    #pokemonInfo { /* Clase Hijo*/
+    /*HEADER*/
+    .header {
+        width: 100%;
+        height: 13em;
+    }
+
+    .welcome img {
+        margin: 1em 0 0 0.5em;
+        /*margin-top: 1em;
+            margin-left: 0.5em;*/
+        width: 4em;
+        height: 3em;
+    }
+
+    #searchbar {
+        width: 12em;
+        height: 1.8em;
+        text-align: center;
+        border-radius: 10px;
+        margin-top: 1.5em;
+    }
+
+    .navegationbar select {
+        width: 7em;
+        height: 1.8em;
+    }
+
+    .menuitem {
+        display: flex;
+        margin: 0 1em;
+        text-decoration: none;
+    }
+
+    #pokemonInfo {
+        /* Clase Hijo*/
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1px;
@@ -206,11 +369,13 @@ h2 {
         margin-top: 1em;
         padding-left: 0.5em;
         padding-bottom: 1.2em;
-   }
+    }
 
-   .pokeInfo { /* Clase creada con JS, clase nieto*/
-        margin: 1em 1em 0 0.5em; /*margin-right:1em;  margin-left: 0.5em;*/
+    .pokeInfo {
+        /* Clase creada con JS, clase nieto*/
+        margin: 1em 1em 0 0.5em;
+        /*margin-right:1em ;
+            margin-left: 0.5em;*/
         padding: 0.5em;
-   }
+    }
 }
-
