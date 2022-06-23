@@ -9,6 +9,8 @@ let data = {
     }]
 }
 };*/
+//export const renderChart = (labels, data, canvas) => {
+//};
 
 
 /*const context = document.getElementById('myChart').getContext('2d');
@@ -29,6 +31,7 @@ const myChart = new Chart(ctx, {
         backgroundColor: [
                 'rgba(255, 99, 132)',
                 'rgba(54, 162, 235)',
+<<<<<<< HEAD
             ],
 
             borderColor: [
@@ -41,3 +44,15 @@ const myChart = new Chart(ctx, {
     }
 
 })*/
+=======
+                'rgba(255, 206, 86)',
+                'rgba(75, 192, 192)',
+                'rgba(155, 102, 205)',
+            
+              ],
+        borderColor: "rgb(255, 99, 132)",
+      },
+    ],
+  },
+});
+>>>>>>> e46972016bd5a01f1a3c83b637dc6dd406994e79

@@ -19,17 +19,16 @@ function showInfo(dataPokemon) {
     divPokemon.innerHTML += `<img src = ${pokemon.img} alt='foto del pokémon'> <h3>${pokemon.name}</h3> <p>${pokemon.num}</p> <p>${pokemon.type}</p>`;
     //Enviamos el div class pokeInfo al div pokemonInfo
     pokemonInfo.appendChild(divPokemon);
-
   });
 }
 // Se muestran los pokémon en el navegador
 showInfo(pokemons);
 
 //Traemos al select donde están A-Z Z-A
-let pokemonOrder = document.getElementById('alphabeticalOrder');
+let pokemonOrder = document.getElementById("alphabeticalOrder");
 
 //Al escoger una opción (change) se muestran los pokémon ordenados alfabéticamente
-pokemonOrder.addEventListener('change', function (e) {
+pokemonOrder.addEventListener("change", function (e) {
   let alphabeticOrder = e.target.value;
   const sortedData = sortData(pokemons, alphabeticOrder);
   showInfo(sortedData);
@@ -90,7 +89,7 @@ divImg.appendChild(img);
 
 
 //Traemos a la barra de búsqueda
-let searchBar = document.querySelector('#searchBar');
+let searchBar = document.querySelector("#searchBar");
 
 //Que la barra busque los pokémon al escribir
 searchBar.addEventListener('input', function (e) {
@@ -141,13 +140,6 @@ let chart = new Chart(pokeGraphic, {
       ]
   }
 })*/
-
-
-
-
-
-
-
 
 /* appendChild
 //1. Seleccio al section padre
