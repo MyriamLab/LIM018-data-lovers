@@ -1,8 +1,7 @@
 //https://www.youtube.com/watch?v=eyTKJmN-I2o&ab_channel=carloscdev
 //npm install chart.js  (https://www.npmjs.com/package/chart.js) npm ci
-export const renderChart = (labels, data, canvas) => {
-
-};
+//export const renderChart = (labels, data, canvas) => {
+//};
 
 
 const ctx = document.getElementById("myChart");
@@ -26,7 +25,7 @@ const myChart = new Chart(ctx, {
                 'rgba(255, 206, 86)',
                 'rgba(75, 192, 192)',
                 'rgba(155, 102, 205)',
-                
+            
               ],
         borderColor: "rgb(255, 99, 132)",
       },
