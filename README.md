@@ -1,4 +1,45 @@
-# Data Lovers
+# Data Lovers - PokeSearch
+
+Nuestro s una página web que le permite a los jugadores de Pokémon Go encontrar 
+información sobre los Pokémon del juego e interactuar con dicha información.
+
+
+#### Imagenes finales del proyecto
+
+
+## Investigación UX
+
+#### ¿Quienes son los principales usuarios de mi producto?
+
+Jugadores de Pokémon Go que desee conocer detalles sobre los Pokémon.
+
+#### ¿Cuál es el objetivo de los usuarios en relación con mi producto?
+
+Poder conocer información sobre los Pokémon de la región de Kanto y Johto.
+
+#### ¿Cómo el producto soluciona los problemas/necesidades de los jugadores de Pokémon?
+
+Permite al usuario conocer cuáles son todos los Pokémon que hay disponibles para jugar, 
+así no los hayan capturado aún, seleccionarlos por tipo, ordenarlos alfabéticamente y 
+ordenarlos por porcentajes.
+
+
+#### Primeros prototipos de baja fidelidad
+
+
+#### Resumen del feedback recibido
+Es una interfaz bonita y llamativa acorde con el tema, algunas mejoras a realizar 
+pueden ser:
+* Hacer toda la página en inglés, ya que la data está en ese idioma.
+* Que las tarjetas de los Pokémon sean más llamativas y resalten del fondo para que 
+  no se vean planas. 
+* Poner una tipografía más llamativa.
+* Que tanto el logo de Pokémon Go como la imagen de Pikachu, tengan tamaños similares.
+
+ 
+ #### Prototipos de alta fidelidad
+
+
 
 ## Índice
 
