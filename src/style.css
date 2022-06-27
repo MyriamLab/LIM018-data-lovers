@@ -12,6 +12,7 @@ body {
 h1 {
   font-size: 2em;
 }
+
 h2 {
   font-size: 1.2em;
   padding: 0 0.5em 0.5em 0.5em;
@@ -105,11 +106,6 @@ button {
   text-align: center;
   width: 13em;
   height: 2.3em;
-}
-
-button:hover {
-  /* transform: scale(0.5.0.5);*/
-  margin-right: 0.5em;
 }
 
 /**** MAIN ****/
