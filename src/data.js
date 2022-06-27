@@ -4,9 +4,9 @@ export const sortData = (data, order) => {
   let newArrPokemon = [...data];
 
   //Ordenando los pokemon alfabéticamente
-  let arrOrder = newArrPokemon.sort((a, b) => a.name < b.name ? -order : order); //-order a se va a posicionar antes (asc)    
+  let arrOrder = newArrPokemon.sort((a, b) => a.name < b.name ? -order : order); //-order a se va a posicionar antes (asc)
   return arrOrder;
-}
+};
 
 //Función para filtrar por tipo de pokémon
 export const filterData = (data, type) => {
@@ -14,7 +14,7 @@ export const filterData = (data, type) => {
     return x.type == type;
   });
   return pokemonType;
-}
+};
 
 //Función para mostrar porcentaje de pokémon por tipo
 export const computeStats = (data, pokemonType) => {
@@ -24,9 +24,8 @@ export const computeStats = (data, pokemonType) => {
       pokePercen.push(data[i].type);
     }
   }
-  return `${((pokePercen.length) * 100 / 251).toFixed(2)}%`;
-  }
-
+  return `${((pokePercen.length * 100) / 251).toFixed(2)}%`;
+};
 
 //Función para buscar pokémon con la barra de búsqueda
 export const searchData = (data, input) => {
@@ -36,6 +35,5 @@ export const searchData = (data, input) => {
       searchResults.push(x);
     }
   });
-  return searchResults
+  return searchResults;
 };
-

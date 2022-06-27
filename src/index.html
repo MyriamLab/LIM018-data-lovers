@@ -3,13 +3,12 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>PokeSearch</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="imagen/Pokebola.png" />
-  <link href="http://fonts.cdnfonts.com/css/retro-land-mayhem" rel="stylesheet">
-  <link href="http://fonts.cdnfonts.com/css/angeltoes" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js"></script>
+  <link href="http://fonts.cdnfonts.com/css/retro-land-mayhem" rel="stylesheet" />
+  <link href="http://fonts.cdnfonts.com/css/angeltoes" rel="stylesheet" />
 </head>
 
 <body class>
@@ -17,14 +16,14 @@
   <header class="header">
     <div class="welcome">
       <figure>
-        <img src="imagen/logopokemon.png" id="logopokemon" width="160px" height="120px" alt="logo de pokémong go" />
+        <img src="imagen/logopokemon.png" id="pokemonlogo" width="160px" height="120px" alt="pokemon go's logo" />
       </figure>
       <div class="title">
-        <h1>¡Welcome Pokemon's Master and Trainer!</h1>
+        <h1>Welcome Pokemon's Master and Trainer!</h1>
         <h2>Find all Pokemon from the Kanto and Johto regions</h2>
       </div>
       <figure>
-        <img src="imagen/pikagif.gif" id="pikachuface" width="160px" height="120px" alt="rostro de pikachu" />
+        <img src="imagen/pikagif.gif" id="pikachuface" width="160px" height="120px" alt="pikachu's face" />
       </figure>
     </div>
     <!--Barra de búsqueda-->
@@ -93,11 +92,10 @@
             </select>
           </li>
         </ul>
-        <button id="cleanButton"> CLEAN </button>
+        <button>CLEAN</button>
       </nav>
     </div>
   </header>
-
 
   <main class="main">
     <div class="banner">
@@ -109,26 +107,28 @@
 
     <!--PANTALLA 2-->
     <!--Sección para los % de pokémon por tipo, se introduce desde main.js-->
-    <section class="secondScreen" id="secondScreen"></section>
+    <section class="hiddenScreen">
+      <div class="secondScreen" id="secondScreen"></div>
+    </section>
   </main>
-
-
 
   <footer>
     <div class="developers">
-      <p>Web site created by</p> <br>
+      <p>Web site created by</p>
+      <br />
       <div>
         <p>Myriam Rivera</p>
-        <a href="https://github.com/MyriamLab"><img src="imagen/githubicon.png"></a>
+        <a href="https://github.com/MyriamLab"><img src="imagen/githubicon.png" /></a>
       </div>
       <div>
         <p>Daniela Andrade</p>
-        <a href="https://github.com/daniandp"><img src="imagen/githubicon.png"></a>
+        <a href="https://github.com/daniandp"><img src="imagen/githubicon.png" /></a>
       </div>
     </div>
     <div class="rights">
-      <p>All rights reserved © - 2022</p> <br>
-      <img src="imagen/pokeiconos.png" alt="iconos de pokémon">
+      <p>All rights reserved © - 2022</p>
+      <br />
+      <img src="imagen/pokeiconos.png" alt="iconos de pokémon" />
     </div>
   </footer>
   <script src="main.js" type="module"></script>
