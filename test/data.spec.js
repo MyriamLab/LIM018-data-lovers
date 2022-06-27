@@ -23,7 +23,6 @@ describe("sortData", () => {
 
 });
 
-
 describe("filterData", () => {
   it("Debería ser una función", () => {
     expect(typeof filterData).toBe("function");
@@ -52,5 +51,4 @@ describe("searchData", () => {
   it("Debería retornar  `Un arreglo con los pokémon que empiezan por la letra a`", () => {
     expect(searchData(testArray, "a")).toEqual(searchTest);
   });
-
 });

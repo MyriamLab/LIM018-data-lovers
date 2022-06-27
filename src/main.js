@@ -67,7 +67,7 @@ pokePercentage.addEventListener("change", function (e) {
   document.querySelector(".banner").style.display = "none";
   hiddenScreen.classList.remove("hiddenScreen");
   if (pokemonPercen) {
-    divPercen.innerHTML = `<p class="text">This is the percentage of Pokemon from type  ${pokemonPercen}:</p> <h4 class="text"> ${percenData} </h4>`;
+    divPercen.innerHTML = `<p class="text">This is the percentage of Pokemon from type ${pokemonPercen}:</p> <h4 class="text"> ${percenData} </h4>`;
   }
 });
 

@@ -1,137 +1,149 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PokeSearch</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="imagen/Pokebola.png" />
+    <link
+      href="http://fonts.cdnfonts.com/css/retro-land-mayhem"
+      rel="stylesheet"
+    />
+    <link href="http://fonts.cdnfonts.com/css/angeltoes" rel="stylesheet" />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <title>PokeSearch</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="imagen/Pokebola.png" />
-  <link href="http://fonts.cdnfonts.com/css/retro-land-mayhem" rel="stylesheet" />
-  <link href="http://fonts.cdnfonts.com/css/angeltoes" rel="stylesheet" />
-</head>
-
-<body class>
-  <!--Barra de navegación-->
-  <header class="header">
-    <div class="welcome">
-      <figure>
-        <img src="imagen/logopokemon.png" id="pokemonlogo" width="160px" height="120px" alt="pokemon go's logo" />
-      </figure>
-      <div class="title">
-        <h1>Welcome Pokemon's Master and Trainer!</h1>
-        <h2>Find all Pokemon from the Kanto and Johto regions</h2>
+  <body class>
+    <!--Barra de navegación-->
+    <header class="header">
+      <div class="welcome">
+        <img
+          src="imagen/logopokemon.png"
+          id="logopokemon"
+          alt="logo de pokémong go"
+        />
+        <div class="title">
+          <h1>Welcome Pokemon's Master and Trainer!</h1>
+          <h2>Find all Pokemon from the Kanto and Johto regions</h2>
+        </div>
+        <img
+          src="imagen/pikagif.gif"
+          id="pikachuface"
+          alt="rostro de pikachu"
+        />
       </div>
-      <figure>
-        <img src="imagen/pikagif.gif" id="pikachuface" width="160px" height="120px" alt="pikachu's face" />
-      </figure>
-    </div>
-    <!--Barra de búsqueda-->
-    <div class="search">
-      <input type="search" id="searchBar" placeholder="  Search Pokemon" />
-    </div>
+      <!--Barra de búsqueda-->
+      <div class="search">
+        <input type="search" id="searchBar" placeholder="  Search Pokemon" />
+      </div>
+      <div class="navegationbar">
+        <nav>
+          <ul>
+            <!--Ordenar alfabéticamente-->
+            <li>
+              <select
+                name="alphabeticalOrder"
+                id="alphabeticalOrder"
+                class="selectors"
+              >
+                <option disabled selected>Order by</option>
+                <option value="1">A-Z</option>
+                <option value="-1">Z-A</option>
+              </select>
+            </li>
+            <!--Filtrar por tipo-->
+            <li>
+              <select name="pokeTypes" id="pokeTypes" class="selectors">
+                <option disabled selected>Filter by</option>
+                <option value="bug">Bug</option>
+                <option value="dark">Dark</option>
+                <option value="dragon">Dragon</option>
+                <option value="electric">Electric</option>
+                <option value="fairy">Fairy</option>
+                <option value="fighting">Fighting</option>
+                <option value="fire">Fire</option>
+                <option value="flying">Flying</option>
+                <option value="ghost">Ghost</option>
+                <option value="grass">Grass</option>
+                <option value="ground">Ground</option>
+                <option value="ice">Ice</option>
+                <option value="normal">Normal</option>
+                <option value="poison">Poison</option>
+                <option value="psychic">Psychic</option>
+                <option value="rock">Rock</option>
+                <option value="steel">Steel</option>
+                <option value="water">Water</option>
+              </select>
+            </li>
+            <!--Filtrar por porcentajes-->
+            <li>
+              <select
+                name="pokePercentage"
+                id="pokePercentage"
+                class="selectors"
+              >
+                <option disabled selected>% Types</option>
+                <option value="bug">Bug</option>
+                <option value="dark">Dark</option>
+                <option value="dragon">Dragon</option>
+                <option value="electric">Electric</option>
+                <option value="fairy">Fairy</option>
+                <option value="fighting">Fighting</option>
+                <option value="fire">Fire</option>
+                <option value="flying">Flying</option>
+                <option value="ghost">Ghost</option>
+                <option value="grass">Grass</option>
+                <option value="ground">Ground</option>
+                <option value="ice">Ice</option>
+                <option value="normal">Normal</option>
+                <option value="poison">Poison</option>
+                <option value="psychic">Psychic</option>
+                <option value="rock">Rock</option>
+                <option value="steel">Steel</option>
+                <option value="water">Water</option>
+              </select>
+            </li>
+          </ul>
+        </nav>
+        <button id="cleanButton">CLEAN</button>
+      </div>
+    </header>
 
-    <div class="navegationbar">
-      <nav class="nav">
-        <ul class="menu">
-          <!--Ordenar alfabéticamente-->
-          <li class="menuitem">
-            <select name="alphabeticalOrder" id="alphabeticalOrder" class="selectors">
-              <option disabled selected>Order by</option>
-              <option value="1">A-Z</option>
-              <option value="-1">Z-A</option>
-            </select>
-          </li>
-          <!--Filtrar por tipo-->
-          <li class="menuitem">
-            <select name="pokeTypes" id="pokeTypes" class="selectors">
-              <option disabled selected>Filter by</option>
-              <option value="bug">Bug</option>
-              <option value="dark">Dark</option>
-              <option value="dragon">Dragon</option>
-              <option value="electric">Electric</option>
-              <option value="fairy">Fairy</option>
-              <option value="fighting">Fighting</option>
-              <option value="fire">Fire</option>
-              <option value="flying">Flying</option>
-              <option value="ghost">Ghost</option>
-              <option value="grass">Grass</option>
-              <option value="ground">Ground</option>
-              <option value="ice">Ice</option>
-              <option value="normal">Normal</option>
-              <option value="poison">Poison</option>
-              <option value="psychic">Psychic</option>
-              <option value="rock">Rock</option>
-              <option value="steel">Steel</option>
-              <option value="water">Water</option>
-            </select>
-          </li>
-
-          <!--Filtrar por porcentajes-->
-          <li class="menuitem">
-            <select name="pokePercentage" id="pokePercentage" class="selectors">
-              <option disabled selected>% Types</option>
-              <option value="bug">Bug</option>
-              <option value="dark">Dark</option>
-              <option value="dragon">Dragon</option>
-              <option value="electric">Electric</option>
-              <option value="fairy">Fairy</option>
-              <option value="fighting">Fighting</option>
-              <option value="fire">Fire</option>
-              <option value="flying">Flying</option>
-              <option value="ghost">Ghost</option>
-              <option value="grass">Grass</option>
-              <option value="ground">Ground</option>
-              <option value="ice">Ice</option>
-              <option value="normal">Normal</option>
-              <option value="poison">Poison</option>
-              <option value="psychic">Psychic</option>
-              <option value="rock">Rock</option>
-              <option value="steel">Steel</option>
-              <option value="water">Water</option>
-            </select>
-          </li>
-        </ul>
-        <button>CLEAN</button>
-      </nav>
-    </div>
-  </header>
-
-  <main class="main">
-    <div class="banner">
-      <!--Sección para toda la info de los pokemon, se introduce desde main.js-->
-      <section class="allPokemon" id="allPokemon">
-        <div id="pokemonInfo"></div>
+    <main class="main">
+      <div class="banner">
+        <!--Sección para toda la info de los pokemon, se introduce desde main.js-->
+        <section class="allPokemon" id="allPokemon">
+          <div id="pokemonInfo"></div>
+        </section>
+      </div>
+      <!--PANTALLA 2-->
+      <!--Sección para los % de pokémon por tipo, se introduce desde main.js-->
+      <section class="hiddenScreen">
+        <div class="secondScreen" id="secondScreen"></div>
       </section>
-    </div>
+    </main>
 
-    <!--PANTALLA 2-->
-    <!--Sección para los % de pokémon por tipo, se introduce desde main.js-->
-    <section class="hiddenScreen">
-      <div class="secondScreen" id="secondScreen"></div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="developers">
-      <p>Web site created by</p>
-      <br />
-      <div>
-        <p>Myriam Rivera</p>
-        <a href="https://github.com/MyriamLab"><img src="imagen/githubicon.png" /></a>
+    <footer>
+      <div class="developers">
+        <p>Web site created by:</p>
+        <div>
+          <p>Myriam Rivera</p>
+          <a href="https://github.com/MyriamLab"
+            ><img src="imagen/githubicon.png"
+          /></a>
+        </div>
+        <div>
+          <p>Daniela Andrade</p>
+          <a href="https://github.com/daniandp"
+            ><img src="imagen/githubicon.png"
+          /></a>
+        </div>
       </div>
-      <div>
-        <p>Daniela Andrade</p>
-        <a href="https://github.com/daniandp"><img src="imagen/githubicon.png" /></a>
+      <div class="rights">
+        <img src="imagen/pokeiconos.png" alt="iconos de pokémon" />
+        <p>All rights reserved © - 2022</p>
       </div>
-    </div>
-    <div class="rights">
-      <p>All rights reserved © - 2022</p>
-      <br />
-      <img src="imagen/pokeiconos.png" alt="iconos de pokémon" />
-    </div>
-  </footer>
-  <script src="main.js" type="module"></script>
-</body>
-
+    </footer>
+    <script src="main.js" type="module"></script>
+  </body>
 </html>

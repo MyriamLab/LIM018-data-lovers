@@ -24,7 +24,7 @@ export const computeStats = (data, pokemonType) => {
       pokePercen.push(data[i].type);
     }
   }
-  return `${((pokePercen.length * 100) / 251).toFixed(2)}%`;
+  return `${((pokePercen.length) * 100 / 251).toFixed(2)}%`;
 };
 
 //Función para buscar pokémon con la barra de búsqueda

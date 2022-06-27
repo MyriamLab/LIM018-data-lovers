@@ -1,4 +1,3 @@
-/*@import './porcentajes.css';*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,28 +10,31 @@ body {
 }
 
 h1 {
-  font-family: "Retro Land Mayhem", sans-serif;
   font-size: 2em;
-  text-align: center;
-  color: #ffffff;
-  margin: 1em 0 0.5em 0.7em;
-  /*arriba, derecha, abajo, izquierda*/
-  /*margin-top: 1em;
-    margin-bottom: 0.5em;
-    margin-left: 0.7em;*/
 }
-
 h2 {
+  font-size: 1.2em;
+  padding: 0 0.5em 0.5em 0.5em;
+}
+
+h1,
+h2 {
+  margin-top: 1em;
   font-family: "Retro Land Mayhem", sans-serif;
-  font-size: 1em;
   text-align: center;
   color: #ffffff;
 }
 
-/*HEADER*/
+ul {
+  list-style: none;
+}
+
+/***** HEADER *****/
 .header {
   background-color: #f51939;
-  height: 15.5em;
+  flex-direction: columns;
+  padding: 1em;
+  max-width: 100em;
 }
 
 .welcome {
@@ -41,26 +43,26 @@ h2 {
 }
 
 .welcome img {
-  margin: 1.5em 0 0 0.5em;
-  /*arriba, derecha, abajo, izquierda*/
-  /*margin-top: 1.5em;
-    margin-left: 0.5em;*/
+  width: 15%;
+  height: 50%;
+  padding: 0.5em;
+  margin: auto;
 }
 
 .search {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.2em;
+  padding: 0 0.5em 0.5em 0.5em;
 }
 
 #searchBar {
   background-image: url("imagen/Pokebola.png");
-  background-size: 1.8em 1.8em;
+  background-size: 2.5em 2.5em;
   background-repeat: no-repeat;
   background-position: left center;
-  width: 13em;
-  height: 1.8em;
+  width: 20em;
+  height: 2.8em;
   text-align: center;
   font-family: "AngelToes", sans-serif;
   font-weight: bold;
@@ -68,53 +70,45 @@ h2 {
   border-radius: 3em;
 }
 
-.nav {
+.navegationbar {
+  /*ANTES nav*/
+  background-color: #f51939;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  padding: 0.5em;
 }
 
-.menu {
+.navegationbar ul {
   display: flex;
-  text-align: center;
-  list-style: none;
+  padding: 0;
 }
 
-.navegationbar select {
+.navegationbar li,
+button {
+  margin-left: 2em;
+}
+
+.navegationbar li:first-child {
+  margin: 0;
+}
+
+.navegationbar ul select,
+button {
+  display: block;
+  padding: 0.5em;
+  border-radius: 2em;
+  font-family: "AngelToes", sans-serif;
+  font-size: 0.8em;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
   width: 13em;
   height: 2.3em;
-  border-radius: 3em;
-  text-align: center;
-  font-family: "AngelToes", sans-serif;
-  font-size: 0.8em;
-  font-weight: bold;
-  cursor: pointer;
 }
 
-.menuitem {
-  display: flex;
-  margin: 0 1.8em;
-  text-decoration: none;
-}
 
-#cleanButton {
-  margin: 0 0 0 2em;
-  /*arriba, derecha, abajo, izquierda*/
-  width: 13em;
-  height: 2.1em;
-  border-radius: 1em;
-  border: outset;
-  font-family: "AngelToes", sans-serif;
-  font-weight: bold;
-  background-color: #ffffff;
-  cursor: pointer;
-}
-
-#cleanButton:hover {
-  transform: scale(1.1);
-}
-
-/*MAIN*/
+/**** MAIN ****/
 .banner img {
   width: 100%;
   height: auto;
@@ -127,8 +121,8 @@ h2 {
   object-fit: cover;
 }
 
-.allPokemon {
   /*Clase padre*/
+.allPokemon {
   top: 1.25em;
   bottom: 6.25em;
   border-radius: 1.25em;
@@ -136,41 +130,34 @@ h2 {
   right: 1.25em;
 }
 
-/* muetsra los pokemon en columnas */
+ /* Clase Hijo. Muestra los pokemon en columnas */
 #pokemonInfo {
-  /* Clase Hijo*/
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 1em;
   background-color: #ffffff;
   border-radius: 1em;
   margin: 2.5em 2.5em;
-  /*arriba, derecha, abajo, izquierda*/
   padding-left: 1em;
 }
 
-.pokeInfo {
   /* Clase creada con JS, clase nieto*/
+.pokeInfo {
   border-radius: 0.2em;
   padding: 0.93em;
   border-width: 0.25em;
   margin: 3em 2.5em 3em 1.5em;
-  /*arriba, derecha, abajo, izquierda*/
-  /*margin-top: 3em;
-    margin-bottom: 3em;
-    margin-left: 1.5em;
-    margin-right: 2.5em;*/
   text-align: center;
   box-shadow: 0.37em 0.37em 0.37em #828182;
-  /*#EEC4C4 #E0C097 #ECE2E2 #E8EAE6 #aca1a1ab*/
-  background: linear-gradient(140deg,
-      rgba(143, 143, 143, 1) 0%,
-      rgba(165, 171, 177, 1) 47%,
-      rgba(75, 80, 89, 1) 100%);
-  /*#bbc0c5 #385ca8*/
+  background: rgb(143, 143, 143);
+  background: linear-gradient(
+    140deg,
+    rgba(143, 143, 143, 1) 0%,
+    rgba(165, 171, 177, 1) 47%,
+    rgba(75, 80, 89, 1) 100%
+  );
 }
 
-/*#0a244d #21559e*/
 .pokeInfo p {
   margin-top: 0.5em;
   font-family: "AngelToes", sans-serif;
@@ -192,7 +179,7 @@ h2 {
   border-radius: 0.2em;
 }
 
-/*PANTALLA 2*/
+/******* *PANTALLA 2 *******/
 .hiddenScreen {
   display: none;
 }
@@ -200,30 +187,28 @@ h2 {
 #secondScreen {
   display: flex;
   flex-wrap: wrap;
-  background-color: white;
-  height: 50em;
+  background-color: #ffffff;
   border-radius: 1em;
   margin: 2.5em 2.5em;
-  padding-left: 1em;
 }
 
 /*div1 padre de divPercen y de imgPokedex*/
 .divPokedex {
-  padding: 0.4em;
-  margin: 4.5em 2.5em;
+  margin: auto;
+  padding: 0.31em;
+  background-color: #ffffff;
 }
 
 .divPercen {
   justify-content: center;
   align-items: center;
   font-family: "AngelToes", sans-serif;
-  font-size: 1.8em;
-  padding: 1.25em;
+  font-size: 1.5em;
+  padding: 1em;
   position: absolute;
-  background-color: yellow;
-  margin: 8em 0 0 4em;
-  width: 10%;
-  /*margin: 2.5em 2.5em;arriba, derecha, abajo, izquierda*/
+  background-color: #ffffff;
+  margin: 10em 0.5em 2.5em 5em;
+  width: 15%;
 }
 
 .text {
@@ -234,27 +219,22 @@ h2 {
 .imgPokedex {
   justify-content: flex-end;
   border-radius: 1.5em;
-  width: 30em;
-  height: 37em;
+  width: 25em;
+  margin: 3.5em;
 }
 
 /*div 2*/
 .divImg {
-  display: flex;
-  flex-direction: wrap;
-  background-color: white;
-  width: 50%;
-  border-radius: 0 2em 2em 0;
+  background-color: #ffffff;
+  width: 50%; 
+  border-radius: 0 1em 1em 0;
 }
 
 .divImg img {
-  justify-content: center;
-  align-items: center;
-  margin: auto;
   display: block;
-  margin-top: 12em;
-  height: 20em;
-  width: 45em;
+  margin: 11em 0 4em;
+  padding: 0.5em;
+  width: 95%;
 }
 
 /*FOOTER*/
@@ -268,8 +248,7 @@ footer {
   height: 8.5em;
 }
 
-footer .developers,
-.rights {
+footer .developers .rights {
   padding: 0.5em 1.5em;
 }
 
@@ -277,8 +256,7 @@ footer .developers,
   justify-items: center;
   text-align: center;
   width: 50%;
-  margin: 0.4em 0 0.4em 0;
-  border-right: solid 0.01em #ffffff;
+  margin: 0.5em 1em 0.4em 1em;
 }
 
 .developers img {
@@ -289,81 +267,105 @@ footer .developers,
 
 .developers div {
   display: flex;
-  margin: 0.3em;
-  justify-content: center;
-}
-
-.dev1,
-.dev2 {
-  align-items: center;
-  justify-content: center;
+  padding: 0.3em;
+  justify-content: space-between;
 }
 
 .rights {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 0.5em;
+  flex-direction: columns;
+  text-align: center;
+  padding: 0.8em;
+  width: 50%;
+  border-left: solid 0.01em #ffffff;
 }
 
 .rights img {
-  width: 12em;
-  height: 2em;
+  width: 11em;
+  height: 1.8em;
+  margin-top: 1em;
 }
 
-@media (max-width: 728px) {
+.developers p {
+  margin-bottom: 0.5em;
+}
+.rights p {
+  padding: 0 0.5 0.5 0.5em;
+}
+
+/******MEDIA QUERIES*******/
+
+@media (max-width: 850px) {
+  /* Pantalla 1 */
+  #pokemonInfo {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+  }
+
+  /*Pantalla 2 */
+  .divPercen {
+    font-size: 1.5em;
+    width: 20%;
+    margin: 8.2em 0.5em 1em 4em;
+  }
+
+  .imgPokedex {
+    border-radius: 1.56em;
+    width: 21.87em;
+    margin-top: 3.5em;
+  }
+
+  .divImg {
+    width: 100%;
+    border-radius: 0 0 1em 1em;
+  }
+
+  .divImg img {
+    margin: 4em 0 2em;
+  }
+}
+
+/*****************************************/
+@media (max-width: 400px) {
+  /* Header */
   h1 {
-    margin: 0.8em 0 0 0.5em;
-    /*margin-top: 0.8em;
-            margin-left: 0.5em;*/
     font-size: 1em;
-    text-align: center;
+    margin: 0.8em 0 0 0.5em;
   }
 
   h2 {
-    margin: 0.8em 0 2em 0;
-    /*margin-top: 0.8em;
-            margin-bottom: 2em;*/
     font-size: 0.6em;
-    text-align: center;
+    margin: 0.8em 0 2em 0;
   }
-
-  /*HEADER*/
-  .header {
-    width: 100%;
-    height: 13em;
-  }
-
   .welcome img {
-    margin: 1em 0 0 0.5em;
-    /*margin-top: 1em;
-            margin-left: 0.5em;*/
-    width: 4em;
-    height: 3em;
+    width: 25%;
+    height: 15%;
   }
 
-  #searchbar {
-    width: 12em;
-    height: 1.8em;
-    text-align: center;
-    border-radius: 0.62em;
-    margin-top: 1.5em;
+  #searchBar {
+    height: 2em;
   }
 
-  .navegationbar select {
-    width: 7em;
-    height: 1.8em;
+  .navegationbar {
+    justify-content: space-around;
   }
 
-  .menuitem {
-    display: flex;
-    margin: 0 1em;
-    text-decoration: none;
+  .navegationbar ul select,
+  button {
+    width: 10em; 
+    height: 3em; 
+    font-size: 0.5em; 
+    margin-right: 1em;
   }
 
+  .navegationbar li,
+  button {
+    margin: auto;
+  }
+
+  /*Pantalla 1*/
+  /* Clase Hijo*/
   #pokemonInfo {
-    /* Clase Hijo*/
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0.06em;
@@ -374,11 +376,34 @@ footer .developers,
     padding-bottom: 1.2em;
   }
 
+  /* Clase creada con JS, clase nieto*/
   .pokeInfo {
-    /* Clase creada con JS, clase nieto*/
     margin: 1em 1em 0 0.5em;
-    /*margin-right:1em ;
-            margin-left: 0.5em;*/
     padding: 0.5em;
   }
+
+  /* Pantalla 2*/
+  .imgPokedex {
+    border-radius: 1.5em;
+    width: 10em;
+    margin: 3.5em;
+  }
+
+  .divPercen {
+    padding: 0.2em;
+    font-size: 1.2em;
+    width: 30%;
+    margin: 4.8em 2em 12.5em 2.8em;
+  }
+
+  .text {
+    font-size: 0.8em;
+    font-weight: bold;
+  }
+
+  .divImg {
+    width: 100%;
+    border-radius: 0 0 1em 1em;
+  }
 }
+
