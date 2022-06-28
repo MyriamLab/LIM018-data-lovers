@@ -1,6 +1,6 @@
 # Data Lovers - PokeSearch
 
-Nuestro s una página web que le permite a los jugadores de Pokémon Go encontrar 
+Nuestro proyecto es una página web que le permite a los jugadores de Pokémon Go encontrar 
 información sobre los Pokémon del juego e interactuar con dicha información.
 
 

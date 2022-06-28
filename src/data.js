@@ -4,7 +4,7 @@ export const sortData = (data, order) => {
   let newArrPokemon = [...data];
 
   //Ordenando los pokemon alfabéticamente
-  let arrOrder = newArrPokemon.sort((a, b) => a.name < b.name ? -order : order); //-order a se va a posicionar antes (asc)    
+  let arrOrder = newArrPokemon.sort((a, b) => a.name < b.name ? -order : order); //-order a se va a posicionar antes (asc)
   return arrOrder;
 };
 
@@ -37,4 +37,3 @@ export const searchData = (data, input) => {
   });
   return searchResults;
 };
-

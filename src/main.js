@@ -16,7 +16,7 @@ function showInfo(dataPokemon) {
     //Le agregamos clase al nuevo div
     divPokemon.setAttribute("class", "pokeInfo");
     //Agregamos todos los datos de los pokémon al nuevo div
-    divPokemon.innerHTML += `<img src = ${pokemon.img} alt='foto del pokémon'> <h3>${pokemon.name}</h3> <p>${pokemon.num}</p> <p>${pokemon.type}</p>`;
+    divPokemon.innerHTML += `<img src = ${pokemon.img} alt="pokemon's image"> <h3>${pokemon.name}</h3> <p>${pokemon.num}</p> <p>${pokemon.type}</p>`;
     //Enviamos el div class pokeInfo al div pokemonInfo
     pokemonInfo.appendChild(divPokemon);
   });
@@ -114,4 +114,6 @@ cleanButton.addEventListener("click", () => {
   document.querySelector(".banner").style.display = "block";
   hiddenScreen.classList.add("hiddenScreen");
 });
+
+
 
