@@ -1,3 +1,13 @@
+@font-face {
+  font-family: Retro-Land-Mayhem;
+  src: url(imagen/retro-land-mayhem.ttf);
+}
+
+@font-face {
+  font-family: AngelToes;
+  src: url(imagen/angeltoes.ttf);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,7 +21,6 @@ body {
 
 h1 {
   font-size: 2em;
-  line-height: 1.5em;
 }
 h2 {
   font-size: 1.2em;
@@ -21,7 +30,7 @@ h2 {
 h1,
 h2 {
   margin-top: 1em;
-  font-family: 'Press Start 2P';
+  font-family: Retro-Land-Mayhem;
   text-align: center;
   color: #ffffff;
 }
@@ -65,7 +74,7 @@ ul {
   width: 20em;
   height: 2.8em;
   text-align: center;
-  font-family: 'Gloria Hallelujah';
+  font-family:  AngelToes;
   font-weight: bold;
   font-size: 0.8em;
   border-radius: 3em;
@@ -99,7 +108,7 @@ button {
   display: block;
   padding: 0.1em;
   border-radius: 2em;
-  font-family: 'Gloria Hallelujah';
+  font-family:  AngelToes;
   font-size: 0.80em;
   font-weight: bold;
   cursor: pointer;
@@ -161,7 +170,7 @@ button {
 
 .pokeInfo p {
   margin-top: 0.5em;
-  font-family: 'Gloria Hallelujah';
+  font-family:  AngelToes;
   font-size: 0.9em;
   color: #ffffff;
   font-weight: bold;
@@ -169,7 +178,7 @@ button {
 
 .pokeInfo h3 {
   margin-top: 0.5em;
-  font-family: 'Gloria Hallelujah';
+  font-family:  AngelToes;
   font-size: 1.2em;
   color: #ffffff;
   font-weight: bold;
@@ -203,8 +212,8 @@ button {
 .divPercen {
   justify-content: center;
   align-items: center;
-  font-family:'Gloria Hallelujah';
-  font-size: 1.3em;
+  font-family:  AngelToes;
+  font-size: 1.5em;
   padding: 1em;
   position: absolute;
   background-color: #ffffff;
@@ -243,7 +252,7 @@ footer {
   display: flex;
   background-color: #f51939;
   padding: 0.09em;
-  font-family:'Gloria Hallelujah';
+  font-family: 'AngelToes';
   color: white;
   text-align: center;
   height: 8.5em;
@@ -337,7 +346,6 @@ footer .developers .rights {
   h2 {
     font-size: 0.6em;
     margin: 0.8em 0 2em 0;
-    line-height: 1.3em;
   }
   .welcome img {
     width: 25%;
