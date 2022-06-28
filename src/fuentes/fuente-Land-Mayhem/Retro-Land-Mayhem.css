@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Retro Land Mayhem';
+    src: url('Retro-Land-Mayhem.woff2') format('woff2'),
+        url('Retro-Land-Mayhem.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
