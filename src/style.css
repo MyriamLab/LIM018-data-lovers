@@ -4,6 +4,17 @@
   padding: 0;
 }
 
+@font-face {
+  font-family: PressStart2P-Regular;
+  src: url(imagen/PressStart2P-Regular.ttf);
+}
+
+@font-face {
+  font-family: GloriaHallelujah-Regular;
+  src: url(imagen/GloriaHallelujah-Regular.ttf);
+}
+
+
 body {
   background-image: url(imagen/pokeballs.jpg);
   position: relative;
@@ -11,6 +22,7 @@ body {
 
 h1 {
   font-size: 2em;
+  line-height: 1.5em;
 }
 
 h2 {
@@ -21,7 +33,7 @@ h2 {
 h1,
 h2 {
   margin-top: 1em;
-  font-family: "Retro Land Mayhem", sans-serif;
+  font-family: PressStart2P-Regular;
   text-align: center;
   color: #ffffff;
 }
@@ -65,7 +77,7 @@ ul {
   width: 20em;
   height: 2.8em;
   text-align: center;
-  font-family: 'AngelToes', sans-serif;
+  font-family: GloriaHallelujah-Regular;
   font-weight: bold;
   font-size: 0.8em;
   border-radius: 3em;
@@ -99,7 +111,7 @@ button {
   display: block;
   padding: 0.1em;
   border-radius: 2em;
-  font-family: 'AngelToes', sans-serif;
+  font-family: GloriaHallelujah-Regular;
   font-size: 0.80em;
   font-weight: bold;
   cursor: pointer;
@@ -160,7 +172,7 @@ button {
 
 .pokeInfo p {
   margin-top: 0.5em;
-  font-family: 'AngelToes', sans-serif;
+  font-family: GloriaHallelujah-Regular;
   font-size: 0.9em;
   color: #ffffff;
   font-weight: bold;
@@ -168,7 +180,7 @@ button {
 
 .pokeInfo h3 {
   margin-top: 0.5em;
-  font-family: 'AngelToes', sans-serif;
+  font-family: GloriaHallelujah-Regular;
   font-size: 1.2em;
   color: #ffffff;
   font-weight: bold;
@@ -202,8 +214,8 @@ button {
 .divPercen {
   justify-content: center;
   align-items: center;
-  font-family: 'AngelToes', sans-serif;
-  font-size: 1.5em;
+  font-family: GloriaHallelujah-Regular;
+  font-size: 1.3em;
   padding: 1em;
   position: absolute;
   background-color: #ffffff;
@@ -242,7 +254,8 @@ footer {
   display: flex;
   background-color: #f51939;
   padding: 0.09em;
-  font-family: 'AngelToes', sans-serif;
+  font-family: GloriaHallelujah-Regular;
+  font-size: 0.79em;
   color: white;
   text-align: center;
   height: 8.5em;
@@ -296,6 +309,10 @@ footer .developers .rights {
 
 @media (max-width: 980px) {
   /* Pantalla 1 */
+  h2{
+    line-height: 1.5em;
+  }
+  
   #pokemonInfo {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -304,9 +321,9 @@ footer .developers .rights {
 
   /*Pantalla 2 */
   .divPercen {
-    font-size: 1.5em;
+    font-size: 1.1em;
     width: 20%;
-    margin: 8.2em 0.5em 1em 4em;
+    margin: 11em 0.5em 1em 6.3em;
   }
 
   .imgPokedex {
@@ -391,9 +408,9 @@ footer .developers .rights {
 
   .divPercen {
     padding: 0.2em;
-    font-size: 1.2em;
+    font-size: 0.78em;
     width: 30%;
-    margin: 4.8em 2em 12.5em 2.8em;
+    margin: 10.5em 2em 12.5em 5.3em;
   }
 
   .text {

@@ -57,7 +57,7 @@ pueden ser:
 
 ![prototipo de alta fidelidad 3](./src/imagen/data%20lovers%20final%205.png)
 
-![prototipo de alta fidelidad 4](./src/imagen/alta%20fidelidad_Responsive_mobil.png)
+![prototipo de alta fidelidad 4](./src/imagen/prototipoMobile.png)
 
 
 
