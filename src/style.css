@@ -1,3 +1,13 @@
+@font-face {
+  font-family: Retro-Land-Mayhem;
+  src: url(imagen/retro-land-mayhem.ttf);
+}
+
+@font-face {
+  font-family: AngelToes;
+  src: url(imagen/angeltoes.ttf);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -21,7 +31,7 @@ h2 {
 h1,
 h2 {
   margin-top: 1em;
-  font-family: "Retro Land Mayhem", sans-serif;
+  font-family: Retro-Land-Mayhem;
   text-align: center;
   color: #ffffff;
 }
@@ -65,7 +75,7 @@ ul {
   width: 20em;
   height: 2.8em;
   text-align: center;
-  font-family: "AngelToes", sans-serif;
+  font-family:  AngelToes;
   font-weight: bold;
   font-size: 0.8em;
   border-radius: 3em;
@@ -97,10 +107,10 @@ button {
 .navegationbar ul select,
 button {
   display: block;
-  padding: 0.5em;
+  padding: 0.1em;
   border-radius: 2em;
-  font-family: "AngelToes", sans-serif;
-  font-size: 0.8em;
+  font-family:  AngelToes;
+  font-size: 0.80em;
   font-weight: bold;
   cursor: pointer;
   text-align: center;
@@ -160,7 +170,7 @@ button {
 
 .pokeInfo p {
   margin-top: 0.5em;
-  font-family: "AngelToes", sans-serif;
+  font-family:  AngelToes;
   font-size: 0.9em;
   color: #ffffff;
   font-weight: bold;
@@ -168,7 +178,7 @@ button {
 
 .pokeInfo h3 {
   margin-top: 0.5em;
-  font-family: "AngelToes", sans-serif;
+  font-family:  AngelToes;
   font-size: 1.2em;
   color: #ffffff;
   font-weight: bold;
@@ -202,7 +212,7 @@ button {
 .divPercen {
   justify-content: center;
   align-items: center;
-  font-family: "AngelToes", sans-serif;
+  font-family:  AngelToes;
   font-size: 1.5em;
   padding: 1em;
   position: absolute;
@@ -242,7 +252,7 @@ footer {
   display: flex;
   background-color: #f51939;
   padding: 0.09em;
-  font-family: "AngelToes", sans-serif;
+  font-family: 'AngelToes';
   color: white;
   text-align: center;
   height: 8.5em;
