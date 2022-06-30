@@ -12,6 +12,7 @@ body {
 h1 {
   font-size: 2em;
 }
+
 h2 {
   font-size: 1.2em;
   padding: 0 0.5em 0.5em 0.5em;
@@ -64,7 +65,7 @@ ul {
   width: 20em;
   height: 2.8em;
   text-align: center;
-  font-family: "AngelToes", sans-serif;
+  font-family: 'AngelToes', sans-serif;
   font-weight: bold;
   font-size: 0.8em;
   border-radius: 3em;
@@ -96,17 +97,16 @@ button {
 .navegationbar ul select,
 button {
   display: block;
-  padding: 0.5em;
+  padding: 0.1em;
   border-radius: 2em;
-  font-family: "AngelToes", sans-serif;
-  font-size: 0.8em;
+  font-family: 'AngelToes', sans-serif;
+  font-size: 0.80em;
   font-weight: bold;
   cursor: pointer;
   text-align: center;
   width: 13em;
   height: 2.3em;
 }
-
 
 /**** MAIN ****/
 .banner img {
@@ -160,7 +160,7 @@ button {
 
 .pokeInfo p {
   margin-top: 0.5em;
-  font-family: "AngelToes", sans-serif;
+  font-family: 'AngelToes', sans-serif;
   font-size: 0.9em;
   color: #ffffff;
   font-weight: bold;
@@ -168,7 +168,7 @@ button {
 
 .pokeInfo h3 {
   margin-top: 0.5em;
-  font-family: "AngelToes", sans-serif;
+  font-family: 'AngelToes', sans-serif;
   font-size: 1.2em;
   color: #ffffff;
   font-weight: bold;
@@ -202,7 +202,7 @@ button {
 .divPercen {
   justify-content: center;
   align-items: center;
-  font-family: "AngelToes", sans-serif;
+  font-family: 'AngelToes', sans-serif;
   font-size: 1.5em;
   padding: 1em;
   position: absolute;
@@ -242,7 +242,7 @@ footer {
   display: flex;
   background-color: #f51939;
   padding: 0.09em;
-  font-family: "AngelToes", sans-serif;
+  font-family: 'AngelToes', sans-serif;
   color: white;
   text-align: center;
   height: 8.5em;
@@ -294,7 +294,7 @@ footer .developers .rights {
 
 /******MEDIA QUERIES*******/
 
-@media (max-width: 850px) {
+@media (max-width: 980px) {
   /* Pantalla 1 */
   #pokemonInfo {
     display: grid;

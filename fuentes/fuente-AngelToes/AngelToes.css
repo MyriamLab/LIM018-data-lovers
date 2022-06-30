@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'AngelToes';
+    src: url('AngelToes.woff2') format('woff2'),
+        url('AngelToes.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
